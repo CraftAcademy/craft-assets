@@ -8,27 +8,26 @@
 
   </head>
   <body>
-    <h3>Images - logos</h3>
-    <div id="images">
+    <div class="row">
+      <div class="medium-8 columns">
+        <h3>Public logos</h3>
+        <p>
+          These images are for public usage.
+        </p>
+        <div id="images">
 
+        </div>
+      </div>
     </div>
 
     <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.1/foundation.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        var dir = ".";
-        var fileextension = ".png";
-        $.ajax({
-            //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-            url: dir,
-            success: function (data) {
-                //List all .png file names in the page
-                $(data).find("a:contains(" + fileextension + ")").each(function () {
-                    var filename = this.href.replace(window.location.host, "").replace("http://", "");
-                    $("#images").append("<img src='" + dir + filename + "'>");
-                });
-            }
+        var dir = "/images/logo/";
+        var files = ['ca-logo-medium.png', 'basic-logo-450X450.png', 'logo-reversed-360x360.png', 'logo-with-tagline.png', 'logo-with-tagline_small.png'];
+        $.each(files, function( index, name ) {
+          $("#images").append($("<p>" + (index +1 )+ " <a href="+ dir + name +  "><img src=" + dir + name + "></img></a></p>"));
         });
       });
     </script>
