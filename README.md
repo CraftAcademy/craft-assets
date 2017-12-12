@@ -1,2 +1,2 @@
 # craft-assets
-Craft Academy websites assets
+[Craft Academy](https://craftacademy.co) websites assets
