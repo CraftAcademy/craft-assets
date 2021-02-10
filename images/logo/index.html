@@ -27,7 +27,7 @@
         var dir = "/images/logo/";
         var files = ['ca-logo-medium.png', 'basic-logo-450X450.png', 'logo-reversed-360x360.png', 'logo-with-tagline.png', 'logo-with-tagline_small.png'];
         $.each(files, function( index, name ) {
-          $("#images").append($("<p>" + (index +1 )+ " <a href="+ dir + name +  "><img src=" + dir + name + "></img></a></p>"));
+          $("#images").append($("<p>" + (index +1 )+ " <a href="+ dir + name +  "><img src="'./' + name + "></img></a></p>"));
         });
       });
     </script>
